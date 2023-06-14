@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: sprayproxy-qncu
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads-stage/pkumari-tenant/sprayproxy-1/sprayproxy-qncu@sha256:2bf559c91327e8689317368c595fd1ecdb1cf2ebd22105d757aa23e9c141def3
+        name: container-image
+        resources: {}
+status: {}
