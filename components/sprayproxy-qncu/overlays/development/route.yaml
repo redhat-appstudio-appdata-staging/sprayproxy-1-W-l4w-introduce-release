@@ -1,0 +1,25 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    haproxy.router.openshift.io/hsts_header: max-age=63072000
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: sprayproxy-qncu
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: sprayproxy-qncu
+    app.kubernetes.io/part-of: sprayproxy-1
+  name: sprayproxy-qncu
+  namespace: pkumari-tenant
+spec:
+  port:
+    targetPort: 9443
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: reencrypt
+  to:
+    kind: Service
+    name: sprayproxy-service
+    weight: null
+status: {}
