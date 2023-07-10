@@ -10,7 +10,7 @@ metadata:
     app.kubernetes.io/managed-by: kustomize
     app.kubernetes.io/name: sprayproxy-qncu
     app.kubernetes.io/part-of: sprayproxy-1
-  name: sprayproxy-qncugonz
+  name: sprayproxy-qncux7th
   namespace: pkumari-tenant
 spec:
   port:
